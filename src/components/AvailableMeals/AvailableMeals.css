@@ -1,0 +1,63 @@
+.meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 2rem auto;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.category button {
+  border: none;
+  background-color: transparent;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.category button.active {
+  background-color: #f89c34;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.loadingFoods {
+  text-align: center;
+  color: white;
+}
+
+@keyframes meals-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .category {
+    justify-content: center;
+  }
+}
